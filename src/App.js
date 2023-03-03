@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Home, Login, Public } from "./containers/public";
+import { Home, Login, Public, Album, Personal } from "./containers/public";
 import { Routes, Route } from "react-router-dom";
 import path from "./ultis/path";
 import { useEffect } from "react";
@@ -17,6 +17,9 @@ function App() {
         <Route path={path.PUBLIC} element={<Public />}>
           <Route path={path.HOME} element={<Home />} />
           <Route path={path.LOGIN} element={<Login />} />
+          <Route path={path.ALBUM_TITLE_PID} element={<Album />} />
+          <Route path={path.MY_MUSIC} element={<Personal />} />
+
         </Route>
       </Routes>
     </div>
